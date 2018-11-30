@@ -1,0 +1,15 @@
+<span class="animated">
+    <h3 class="fade-in"><span class="changa">Thank you</span></h3>
+    <h3 class="fade-in">{{userDetails/firstname}} {{userDetails/lastname}}</h3>
+</span>
+<div class="textblock">
+    {{#sign}}<img class="sign" src="{{sign}}" />{{/sign}}
+    <button><a href="/signees" class="animated">See all the supporters</a></button>
+    <br>
+    <button class="inline-block margin-right"><a href="profile/edit" class="animated">Edit your profile</a></button>
+    <form class="inline-block margin-right" method="post">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <button name="submit" id="submitButton"><span class="animated">Delete signature</span></button>
+    </form>
+    <button class="inline-block"><a href="/logout" class="animated">Log out</a></button>
+</div>

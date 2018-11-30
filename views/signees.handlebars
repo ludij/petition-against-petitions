@@ -1,0 +1,17 @@
+<span class="animated">
+    <h3 class="fade-in"><span class="changa">No more petitions</span></h3>
+    <h3 class="fade-in">Supported {{#if currentCity}}from {{properCase currentCity}} {{/if}}by</h3>
+</span><p>
+{{#signees}}
+    {{#if website}}
+    <a href="{{properUrl website}}" target="_blank">{{firstname}} {{lastname}}</a>
+    {{else}}
+    {{firstname}} {{lastname}}
+    {{/if}}
+    {{#if age}} | {{age}} years old{{/if}}
+    {{#if city}} | from <a href="/signees/{{city}}">{{city}}</a>{{/if}}
+    <br>
+{{/signees}}
+</p>
+<a href="/thanks" class="no-decoration"><button class="black-bg">Back to your signature</button></a>
+<a href="/logout" class="no-decoration"><button class="gray-bg">Log out</button></a>

@@ -1,0 +1,20 @@
+<span class="animated">
+    <h3 class="fade-in"><span class="changa">Please sign here</span></h3>
+    <h3 class="fade-in">{{userDetails/firstname}} {{userDetails/lastname}}</h3>
+</span>
+<div class="textblock">
+    {{#if errorPlaceholder}}
+    <p class="red">{{errorPlaceholder}}</p>
+    {{/if}}
+    <form method="post">
+        <label for="sign">Your signature:</label>
+        <input id="sign" class="hidden" type="text" name="sign">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <canvas height="250px" width="400px">
+        </canvas>
+        <br>
+        <button name="submit" id="submitButton"><span class="animated">Add signature</span></button>
+    </form>
+    <button class="inline-block margin-right"><a href="profile/edit" class="animated">Edit your profile</a></button>
+    <button class="inline-block"><a href="/logout" class="animated">Log out</a></button>
+</div>

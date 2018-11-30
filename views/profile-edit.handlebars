@@ -1,0 +1,48 @@
+<span class="animated">
+    <h3 class="fade-in"><span class="changa">Your information</span></h3>
+    <h3 class="fade-in">{{userDetails/firstname}} {{userDetails/lastname}}</h3>
+</span>
+<div class="textblock">
+    <p>You can update your information here.</p>
+    {{#if errorPlaceholder}}
+    <p class="red">{{errorPlaceholder}}</p>
+    {{/if}}
+    <form method="post">
+        <div class="inline-block">
+            <label for="firstName">Your first name:</label>
+            <input id="firstName" type="text" name="firstName" value="{{userDetails/firstname}}">
+        </div>
+        <div class="inline-block">
+            <label for="lastName">Your last name:</label>
+            <input  id="lastName" type="text" name="lastName" value="{{userDetails/lastname}}">
+        </div>
+        <div class="inline-block">
+            <label for="password">Your email:</label>
+            <input  id="password" type="text" name="email" value="{{userDetails/email}}">
+        </div>
+        <div class="inline-block">
+            <label for="email">Your password:</label>
+            <input  id="email" type="password" name="password">
+        </div>
+        <div class="inline-block">
+            <label for="age">Your age:</label>
+            <input id="age" type="text" name="age" value="{{userDetails/age}}">
+        </div>
+        <div class="inline-block">
+            <label for="city">Your place of residence:</label>
+            <input  id="city" type="text" name="city" value="{{userDetails/city}}">
+        </div>
+        <div class="inline-block">
+            <label for="website">Your website:</label>
+            <input  id="website" type="text" name="website" value="{{userDetails/website}}">
+        </div>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <br>
+        <button name="submit" id="submitButton"><span class="animated">Update profile</span></button>
+    </form>
+    <form class="inline-block margin-right" method="post">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <button name="delete" id="deletButton"><span class="animated">Delete profile</span></button>
+    </form>
+    <button class="inline-block" ><a href="/logout" class="animated">Log out</a></button>
+</div>

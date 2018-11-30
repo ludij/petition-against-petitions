@@ -1,0 +1,24 @@
+<span class="animated">
+    <h3 class="fade-in"><span class="changa">Welcome back</span></h3>
+    <h3 class="fade-in">Please log in</h3>
+</span>
+<div class="textblock">
+    {{#if errorPlaceholder}}
+        <p class="red">{{errorPlaceholder}}</p>
+    {{/if}}
+    <form method="post">
+        <div class="inline-block">
+            <label for="email">Your email address:</label>
+            <input  id="email" type="text" name="email">
+        </div>
+        <div class="inline-block">
+            <label for="password">Your password:</label>
+            <input  id="password" type="password" name="password">
+        </div>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <br>
+        <button name="submit" id="submitButton"><a class="animated">Log in</a></button>
+    </form>
+    <p>Not registered yet?</p>
+    <button><a href="/register" class="animated">Register</a></button>
+</div>

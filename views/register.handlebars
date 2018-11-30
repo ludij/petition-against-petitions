@@ -1,0 +1,38 @@
+<span class="animated">
+    <h3 class="fade-in"><span class="changa">No more Petitions</span></h3>
+</span>
+<div class="textblock">
+    <p>Are you sick and tired of people asking you to support petitions that may or may not have a good cause? Who cares, right? This petition is the last you will have to sign, because it will put an end to all petitions. Forever.</p>
+</div>
+<span class="animated">
+    <h3 class="fade-in">Please join us</h3>
+</span>
+<div class="textblock">
+    {{#if errorPlaceholder}}
+    <p class="red">{{errorPlaceholder}}</p>
+    {{/if}}
+    <form method="post">
+        <div class="inline-block">
+            <label for="firstName">Your first name:</label>
+            <input id="firstName" type="text" name="firstName">
+        </div>
+        <div class="inline-block">
+            <label for="lastName">Your last name:</label>
+            <input  id="lastName" type="text" name="lastName">
+        </div>
+        <br>
+        <div class="inline-block">
+            <label for="email">Your email address:</label>
+            <input  id="email" type="text" name="email">
+        </div>
+        <div class="inline-block">
+            <label for="password">Your password:</label>
+            <input  id="password" type="password" name="password">
+        </div>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <br>
+        <button name="submit" id="submitButton"><span class="animated">Register<span></button>
+    </form>
+    <p>Already registered?</p>
+    <button><a href="/login" class="animated">Log in</a></button>
+</div>

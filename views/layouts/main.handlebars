@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Petition AGAINST Petitions</title>
+    </head>
+    <body class="flex">
+        <header class="flex">
+            <a href="/welcome" class="animated">
+                <h1>Petition<span class="changa">&nbsp;&nbsp;against&nbsp;</span>Petitions</h1>
+            </a>
+        </header>
+        <main class="flex">
+            {{{body}}}
+            <br>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        {{#script}}<script src="{{.}}" charset="utf-8"></script>{{/script}}
+    </body>
+</html>

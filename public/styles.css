@@ -1,0 +1,218 @@
+@import 'https://fonts.googleapis.com/css?family=Kaushan+Script|Changa+One|Source+Sans+Pro';
+
+* {overflow: visible;}
+
+body {
+    font-family: Source Sans Pro;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    color: #9AA89C;
+    margin: 0;
+    padding: 0;
+    background-color: #FBF9F4;
+    background-image: linear-gradient(#FBF9F4, #F3F0E7 65%, #FBF9F4);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    z-index:999;
+    position: fixed;
+    height: 140px;
+    width: 100vw;
+    justify-content: flex-start;
+    background-image: linear-gradient(#FBF9F4 55%, transparent 100%);
+}
+
+main {
+    margin-top: 120px;
+    flex-grow: 1;
+}
+
+h1, h3 {
+    font-family: 'Kaushan Script', sans-serif;
+    color: #5C6566;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 40px;
+    text-shadow: #9AA89C -1px -1px 1px, #CADCCC 1px 1px 1px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 80px;
+    line-height: 100px;
+    text-shadow: #9AA89C -3px -3px 3px, #CADCCC 3px 3px 3px;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+}
+
+a {
+    text-decoration: none;
+    color: #9AA89C;
+}
+
+p a {
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+}
+
+input, button, img {
+    display: table-row;
+    font-family: Source Sans Pro;
+    text-align: center;
+    line-height: 1.5em;
+    margin: 0.5em auto 1em auto;
+    user-select: none;
+    outline: none;
+}
+
+input {
+    font-size: 16px;
+    color: #5C6566;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #9AA89C;
+}
+
+button {
+    font-size: 16px;
+    border: 1px solid #9AA89C;
+    color: #9AA89C;
+    background: transparent;
+    box-shadow: #9AA89C -1px -1px 1px, #CADCCC 1px 1px 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+canvas {
+    text-align: center;
+    border: 1px solid #9AA89C;
+    cursor: sw-resize;
+    width: 400px;
+    height: 250px;
+    margin: 0.5em auto 0.5em auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.inline-block {
+    display:inline-block;
+}
+
+form .inline-block {
+    margin: 10px;
+}
+
+.margin-right {
+    margin-right: 20px;
+}
+
+.textblock{
+    width: 400px;
+}
+
+.changa {
+    font-family: 'Changa One', sans-serif;
+    color: #B92E31;
+    text-transform: uppercase;
+}
+
+.fade-in{
+    animation: 1.5s ease-in-out fadeIn;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to   {opacity: 1}
+}
+
+.blink{
+    animation: 3s ease-in-out infinite grow;
+}
+
+@keyframes grow {
+    0% {transform: scale(1);}
+    10% {transform: scale(1.2);}
+    90% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+a.animated{
+    width: 103%;
+    transform: translateX(-1.5%);
+}
+
+.animated:hover {
+    -webkit-mask-image: linear-gradient(-60deg, #000000 12%, rgba(0,0,0,.8) 15%, rgba(0,0,0,.6) 18%, rgba(0,0,0,.8) 20%, #000000 40%, rgba(0,0,0,.8) 45%, rgba(0,0,0,.6) 50%, rgba(0,0,0,.8) 55%, #000000 60%);
+    -webkit-mask-size: 300%;
+    animation: shine 3s linear infinite;
+}
+
+@-webkit-keyframes shine {
+  0% {-webkit-mask-position: 0%;}
+  60% {-webkit-mask-position: -150%;}
+  100% {-webkit-mask-position: -150%;}
+}
+
+.red {
+    color: #B92E31;
+}
+
+.sign {
+    width: 100%;
+}
+.hidden {
+    display:none;
+}
+
+/* for mobile */
+@media screen and (max-width: 480px){
+    header {
+        height: 120px;
+    }
+    main {
+        width: 100vw;
+    }
+    h1 {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 18px;
+    }
+    h3 {
+        font-size: 35px;
+        line-height: 45px;
+        text-shadow: #9AA89C -3px -3px 3px, #CADCCC 3px 3px 3px;
+        margin-block-start: 0.2em;
+        margin-block-end: 0.2em;
+    }
+    canvas {
+        width: 96vw;
+        height: 250px;
+        margin: 0.5em auto 0.5em auto;
+    }
+    .textblock{
+        width: 96vw;
+    }
+}

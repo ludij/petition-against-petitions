@@ -1,0 +1,29 @@
+<span class="animated">
+    <h3 class="fade-in"><span class="changa">Welcome</span></h3>
+    <h3 class="fade-in">{{userDetails/firstname}} {{userDetails/lastname}}</h3>
+</span>
+<div class="textblock">
+    <p>We would love to get some more information from you!</p>
+    {{#if errorPlaceholder}}
+    <p class="red">{{errorPlaceholder}}</p>
+    {{/if}}
+    <form method="post">
+        <div class="inline-block">
+            <label for="age">Your age:</label>
+            <input id="age" type="text" name="age" value="{{userDetails/age}}">
+        </div>
+        <div class="inline-block">
+            <label for="city">Your place of residence:</label>
+            <input  id="city" type="text" name="city" value="{{userDetails/city}}">
+        </div>
+        <br>
+        <div class="inline-block">
+            <label for="website">Your website:</label>
+            <input  id="website" type="text" name="website" value="{{userDetails/website}}">
+        </div>
+        <input type="hidden" name="_csrf" value="{{csrfToken}}">
+        <br>
+        <button name="submit" id="submitButton"><span class="animated">Submit<span></button>
+    </form>
+    <button><a href="/logout" class="animated">Log out</a></button>
+</div>
